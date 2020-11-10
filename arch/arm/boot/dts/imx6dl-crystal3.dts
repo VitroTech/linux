@@ -327,9 +327,13 @@
 };
 
 /* eMMC */
+/* Temporary disabled. It is a workaround for platform booting issue
+   with Vitrobian based on Debian 10 (buster).
+   Sometimes platform doesn't boot due to incorrect enumeration
+   process execution and SD card with Vitrobian can't be detected properly. */
 &usdhc3 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_crystal3_usdhc3>;
 	bus-width = <8>;
-	status = "okay";
+	status = "disabled";
 };
