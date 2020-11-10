@@ -270,6 +270,8 @@
 			reg_vgen3_2v5: vgen3 {
 				regulator-min-microvolt = <1800000>;
 				regulator-max-microvolt = <3300000>;
+				regulator-boot-on;
+				regulator-always-on;
 			};
 
 			/* VGEN1_1V8 voltage rail */
