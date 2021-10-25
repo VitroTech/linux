@@ -180,6 +180,8 @@
 				 * Fast Slew Rate
 				 */
 
+				/* PI_GPIO17 */
+				MX6QDL_PAD_EIM_EB0__GPIO2_IO28 0x130b1
 				/* PI_GPIO_27 */
 				MX6QDL_PAD_EIM_EB1__GPIO2_IO29 0x130b1
 				/* PI_GPIO_22 */
@@ -205,21 +207,18 @@
 				MX6QDL_PAD_EIM_A19__GPIO2_IO19 0x1b0b1
 				/*  mPCIe2 MC5728_EXT_RST_N */
 				MX6QDL_PAD_EIM_A20__GPIO2_IO18 0x1b0b1
-
-				/* PI_GPIO17 - pull up for external shutdown */
-				MX6QDL_PAD_EIM_EB0__GPIO2_IO28 0x1b0b1
 			>;
 		};
 
 		pinctrl_crystal3_pwm1: crystal3-pwm1 {
 			fsl,pins = <
-				MX6QDL_PAD_DISP0_DAT8__PWM1_OUT 0x1b0b1
+				MX6QDL_PAD_DISP0_DAT8__GPIO4_IO29 0x1b0b1
 			>;
 		};
 
 		pinctrl_crystal3_pwm3: crystal3-pwm3 {
 			fsl,pins = <
-				MX6QDL_PAD_SD4_DAT1__PWM3_OUT 0x1b0b1
+				MX6QDL_PAD_SD4_DAT1__GPIO2_IO09 0x1b0b1
 			>;
 		};
 
@@ -327,10 +326,6 @@
 };
 
 /* eMMC */
-/* Temporary disabled. It is a workaround for platform booting issue
-   with Vitrobian based on Debian 10 (buster).
-   Sometimes platform doesn't boot due to incorrect enumeration
-   process execution and SD card with Vitrobian can't be detected properly. */
 &usdhc3 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_crystal3_usdhc3>;
