@@ -335,5 +335,5 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_crystal3_usdhc3>;
 	bus-width = <8>;
-	status = "disabled";
+	status = "okay";
 };
