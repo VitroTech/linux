@@ -134,8 +134,8 @@
 &fec {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_crystal_enet_ar8035>;
-	phy-mode = "rgmii";
-	phy-reset-duration = <2>;
+	phy-mode = "rgmii-id";
+	phy-reset-duration = <10>;
 	phy-reset-gpios = <&gpio4 15 GPIO_ACTIVE_LOW>;
 	status = "okay";
 };
